@@ -9,7 +9,7 @@ const NavSearch = () => {
             <div className="max-width-element">
                 <Link to="/" className="header-search__logo">
                     <picture>
-                        <source media="(min-width:600px)" srcset={logoDesktop} />
+                        <source media="(min-width:600px)" srcSet={logoDesktop} />
                         <img src={logoMobile} alt="Logo Mercado Libre" title="Logo Mercado Libre"/>
                     </picture> 
                 </Link>
