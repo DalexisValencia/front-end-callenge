@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
+import NavSearch from "../components/navSearch/navSearch";
 
 const Layout = () => {
     return (
         <>
-        Aqui va el navegador
-        <Outlet />
+            <NavSearch/>
+            <Outlet/>
         </>
     )
 }
