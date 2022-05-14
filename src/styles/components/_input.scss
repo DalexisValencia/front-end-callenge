@@ -1,0 +1,40 @@
+/*
+* This class is imported ONLY inside
+* elements that directly extend it
+* 
+* elements that currently use this class:
+* .header-search__input
+*
+*/
+
+%input {
+    padding: 0px 15px;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: 'proximanova-regular';
+    //Remove blue outline border focus  
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+    }
+    //Remove background-color when the user autocomplete the input with previous value
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+        box-shadow: 0 0 0 30px white inset !important;
+        -webkit-box-shadow: 0 0 0 30px white inset !important;
+    }
+    &::placeholder {
+        color: var(--gray-color);
+    }
+    //if the input is type=number remove lateral arrows
+    &[type="number"] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield;
+    }
+}

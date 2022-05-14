@@ -1,0 +1,18 @@
+$path: '../assets/fonts';
+@font-face {
+    font-family: 'proximanova-light';
+    src: url('#{$path}/proximanova-light.ttf');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'proximanova-regular';
+    src: url('#{$path}/proximanova-regular.ttf');
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: 'proximanova-semibold';
+    src: url('#{$path}/proximanova-semibold.ttf');
+    font-display: fallback;
+}

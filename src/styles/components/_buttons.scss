@@ -1,0 +1,27 @@
+%button {
+    flex: 0 0 auto;
+    align-items: center;
+    display: inline-flex;
+    letter-spacing: .0892857143em;
+    justify-content: center;
+    outline: 0;
+    position: relative;
+    text-decoration: none;
+    text-indent: .0892857143em;
+    transition-duration: .28s;
+    transition-property: box-shadow, transform, opacity;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 0px solid transparent;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: 0;
+        outline-color: transparent !important;
+    }
+}
