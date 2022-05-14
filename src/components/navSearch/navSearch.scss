@@ -1,0 +1,62 @@
+@import '../../styles/components/input';
+@import '../../styles/components/buttons';
+@import '../../styles/components/bgImage';
+@import '../../styles/queries.scss';
+// Header full width
+.header-search {
+    padding: 13px 0;
+    background-color: var(--yellow-color);
+    // max container 1280px
+    >.max-width-element {
+        display: flex;
+        align-items: stretch;
+    }
+}
+
+//Anchor logo container
+.header-search__logo {
+    width: 68px;
+    //height: 46px;
+    min-width: 68px;
+    // height: 46px;
+    picture {
+        &,
+        img {
+            width: 100%;
+        }
+        img {
+            margin-top: 4px;
+        }
+    }
+}
+
+//Input search wrapper
+.header-search__form-search {
+    margin-left: 35px;
+    width: 100%;
+    background-color: --white-color;
+    display: flex;
+    flex-wrap: nowrap;
+    //input search
+    .header-search__input {
+        @extend %input;
+        width: 100%;
+        border-top-left-radius: 2.5px;
+        border-bottom-left-radius: 2.5px;
+        font-size: 18px;
+        color: var(--gray-dark-2-color);
+    }
+    //search lateral right button (magnifying glass icon) 
+    .header-search__icon {
+        width: 55px;
+        height: 100%;
+        background-color: var(--gray-light-color);
+        background-image: url(../../assets/misc/ic_search@2x.png);
+        background-size: 40%;
+        @extend %button,
+        %bgImage;
+    }
+    @include media-xs {
+        margin-left: 10px;
+    }
+}
