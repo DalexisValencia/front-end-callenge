@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/main.scss';
 import Layout from './layout/layout';
 import Search from './views/search';
 import Details from './views/details';
