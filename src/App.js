@@ -1,6 +1,6 @@
 import './styles/main.scss';
 import Layout from './layout/layout';
-import Search from './views/search';
+import Search from './views/search/search';
 import Details from './views/details/details';
 import Results from './views/results/results';
 

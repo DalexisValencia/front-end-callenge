@@ -1,0 +1,22 @@
+.search-section__wrapper {
+    background-color: var(--white-color);
+    border-radius: 4px;
+    margin-top: 36px;
+    padding: 16px;
+    height: 300px;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+.search-section__welcome {
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    color: var(--gray-dark-1-color);
+    font: {
+        size: 25px;
+        family: 'proximanova-regular';
+        weight: 500;
+    }
+}

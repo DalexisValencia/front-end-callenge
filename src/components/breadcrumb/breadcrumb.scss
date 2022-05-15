@@ -8,6 +8,8 @@
             position: relative;
             user-select: none;
             margin-right: 5px;
+            display: flex;
+            align-items: center;
             a {
                 color: var(--gray-color);
                 text-decoration: none;
@@ -15,6 +17,9 @@
                     family: 'proximanova-light';
                     weight: 500;
                     size: 14px;
+                }
+                &::first-letter {
+                    text-transform: uppercase;
                 }
             }
             &:not(&:last-child) {
