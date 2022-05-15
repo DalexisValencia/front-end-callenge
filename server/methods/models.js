@@ -27,7 +27,7 @@ module.exports.customItemsModel = function(res) {
             },
             picture: res.item.thumbnail,
             condition: res.item.condition,
-            free_shipping: res.item.free_shipping,
+            free_shipping: res.item.shipping.free_shipping,
             sold_quantity: res.item.sold_quantity,
             description: res.description.plain_text
         }
@@ -41,6 +41,9 @@ module.exports.customItemsModel = function(res) {
  * item: api call response for ${api.baseurl}sites/MLA/search?q=${querie}`
  */
 module.exports.customSearchModel = function(res) {
+    //Delete iterms from result only 4 left 
+    const itemsFilter = res.results.splice(4, (res.results.length - 4));
+
     return {
         ...author,
         categories: res.available_filters.map((item) => { return item.name }),
@@ -50,12 +53,12 @@ module.exports.customSearchModel = function(res) {
                 title: item.title,
                 price: {
                     currency: item.currency_id,
-                    amount: item.base_price,
+                    amount: item.price,
                     decimals: item.available_quantity
                 },
                 picture: item.thumbnail,
                 condition: item.condition,
-                free_shipping: item.free_shipping,
+                free_shipping: item.shipping.free_shipping,
             }
         }),
     };

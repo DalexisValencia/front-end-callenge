@@ -24,6 +24,10 @@
                 width: 100%;
             }
         }
+        @include media-xs {
+            display: contents;
+            flex: unset;
+        }
     }
     .details-item__column-right {
         flex: 1;
@@ -68,6 +72,11 @@
             }
             .details-item__price-symbol {
                 margin-right: 10px;
+            }
+            .details-item__price-fraction {
+                sup {
+                    font-size: 38px;
+                }
             }
             @include media-xs {
                 font-size: 32x;

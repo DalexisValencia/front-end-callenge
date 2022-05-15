@@ -8,7 +8,9 @@ const headers = {
 class QueriesServices {
     search(querie) {
         return axios.get(`${BASE_URL}items/?q=${querie}`, { headers: headers });
-        // return fetch(`${BASE_URL}items/?q=${querie}`).then(res => res.json());
+    }
+    details(id) {
+        return axios.get(`${BASE_URL}items/${id}`, { headers: headers });
     }
 }
 
