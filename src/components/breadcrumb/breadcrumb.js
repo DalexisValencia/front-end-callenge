@@ -7,18 +7,15 @@ const BreadCrumb = (props) => {
         url: '/' 
     };
 
-    function buildCrumbs(){
+    const buildCrumbs = function(){
         const localBreadCrumbs = [ homeCrumb, ...props.crumbs ];
-        const arrow = <li className="breadcrumb__arrow">&gt;</li>;
         return localBreadCrumbs.map((crumb, index)=>
-            <>
-                <li key={crumb.name}>
+                <li key={index}>
                     <Link to={crumb.url}>{crumb.name}</Link>
                 </li>
-                {index+1 < localBreadCrumbs.length ? arrow : null }
-            </>
         );
     }
+    
     return(
         <nav className="breadcrumb">
             <ul>

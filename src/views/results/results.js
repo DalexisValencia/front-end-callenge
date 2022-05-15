@@ -18,7 +18,6 @@ const Results = () => {
         if(termSearch) {
             setIsLoad(true);
             QueriesServices.search(termSearch).then((result) => {
-                console.log(result.data.body)
                 setItems(result.data.body.items);
                 setIsLoad(false);
                 },

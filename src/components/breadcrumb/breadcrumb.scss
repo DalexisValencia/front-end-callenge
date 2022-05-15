@@ -5,6 +5,7 @@
         padding: 16px 0px;
         display: flex;
         li {
+            position: relative;
             user-select: none;
             margin-right: 5px;
             a {
@@ -14,6 +15,16 @@
                     family: 'proximanova-light';
                     weight: 500;
                     size: 14px;
+                }
+            }
+            &:not(&:last-child) {
+                color: var(--gray-color);
+                font-family: 'proximanova-light';
+                margin-right: 10px;
+                &::after {
+                    content: ">";
+                    margin-left: 8px;
+                    font-size: 12px;
                 }
             }
         }
