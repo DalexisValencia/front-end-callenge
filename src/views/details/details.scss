@@ -1,0 +1,129 @@
+@import '../../styles/components/buttons';
+@import '../../styles/queries.scss';
+//main detail wrapper
+.details-item {
+    margin-bottom: 100px;
+    .details-item__wrapper {
+        background-color: var(--white-color);
+        border-radius: 2px;
+        padding: 32px;
+    }
+}
+
+//image, and lateral container (title, price label and button)
+.details-item__summary {
+    display: flex;
+    .details-item__image-wrapper {
+        flex: 2;
+        .details-item__figure {
+            margin: 0;
+            width: 100%;
+            max-width: 680px;
+            margin: 0px auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .details-item__column-right {
+        flex: 1;
+        margin-left: 36px;
+        color: var(--black-color);
+        font-family: 'proximanova-light';
+        .details-item__label {
+            font: {
+                size: 14px;
+                weight: 400;
+            }
+            @include media-xs {
+                font-size: 10px;
+            }
+        }
+        .details-item__name {
+            margin: 16px 0 0;
+            line-height: 1.25;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+            box-orient: vertical;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+            font: {
+                size: 24px;
+                weight: 500;
+                family: 'proximanova-semibold';
+            }
+            @include media-xs {
+                font-size: 16px;
+                margin-top: 8px;
+            }
+        }
+        .details-item__price {
+            margin: 32px 0;
+            font: {
+                size: 46px;
+                weight: 500;
+            }
+            .details-item__price-symbol {
+                margin-right: 10px;
+            }
+            @include media-xs {
+                font-size: 32x;
+                margin: 16px 0;
+            }
+        }
+        .details-item__buy {
+            @extend %button;
+            width: 100%;
+            max-width: 65%;
+            padding: 10px 20px;
+            background-color: var(--blue-light-color);
+            border-radius: 4px;
+            color: var(--white-color);
+            font-size: 16px;
+            margin-right: 32px;
+            @include media-xs {
+                font-size: 14;
+                margin-right: 16px;
+                max-width: 100%;
+            }
+        }
+        @include media-xs {
+            margin-top: 16px;
+            margin-left: 0;
+        }
+    }
+    @include media-xs {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+
+//description bottom container
+.details-item__description {
+    margin-top: 152px;
+    font-family: 'proximanova-regular';
+    .details-item__description-title {
+        font: {
+            weight: 400;
+            size: 28px;
+        }
+        @include media-xs {
+            font-size: 20px;
+        }
+    }
+    .details-item__description-p {
+        width: 75%;
+        font-size: 16px;
+        color: var(--gray-color);
+        @include media-xs {
+            font-size: 14px;
+            width: 100%;
+        }
+    }
+    @include media-xs {
+        margin-top: 40px;
+    }
+}
