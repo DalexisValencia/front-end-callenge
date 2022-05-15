@@ -79,6 +79,9 @@
             font-size: 12px;
         }
     }
+    .result-card__shiping-free {
+        margin-left: 10px;
+    }
 }
 
 //city name
@@ -98,5 +101,18 @@
     }
     @include media-xs {
         display: none;
+    }
+}
+
+.result-card__empty {
+    text-align: center;
+    margin: 16px;
+    font: {
+        size: 20px;
+        family: 'proximanova-light';
+    }
+    b {
+        font-weight: bold;
+        font-family: 'proximanova-semibold';
     }
 }
