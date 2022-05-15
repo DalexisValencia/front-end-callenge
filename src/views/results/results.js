@@ -42,6 +42,7 @@ const Results = () => {
     }
 
     function renderItems() {
+        //No items
         if(items.length === 0) {
             return (
                 <h3 className="result-card__empty">
