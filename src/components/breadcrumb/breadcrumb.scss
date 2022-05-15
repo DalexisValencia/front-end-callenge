@@ -1,0 +1,21 @@
+.breadcrumb {
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 16px 0px;
+        display: flex;
+        li {
+            user-select: none;
+            margin-right: 5px;
+            a {
+                color: var(--gray-color);
+                text-decoration: none;
+                font: {
+                    family: 'proximanova-light';
+                    weight: 500;
+                    size: 14px;
+                }
+            }
+        }
+    }
+}
