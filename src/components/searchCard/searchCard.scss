@@ -1,0 +1,102 @@
+@import '../../styles/queries.scss';
+//Wrapper card
+.result-card {
+    display: flex;
+    padding: 0 0 16px;
+    text-decoration: none;
+    &:not(&:first-child) {
+        padding-top: 16px;
+    }
+    &:not(&:last-child) {
+        border-bottom: 0.5px solid var(--gray-light-color);
+        padding-bottom: 16px;
+    }
+    &:last-child {
+        padding-bottom: 0;
+    }
+    //product image
+    .result-card__image {
+        margin-right: 16px;
+        width: 30%;
+        max-width: 180px;
+        overflow: hidden;
+        img {
+            border-radius: 4px;
+            width: 100%;
+            object-fit: cover;
+        }
+        @include media-xs {
+            min-width: 100px;
+        }
+    }
+    //wrapper detail content
+    .result-card__content-columns {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+// Price, description and shiping-free container
+.result-card__content-wrapper {
+    // width: 55%;
+    flex: 2;
+    color: var(--black-color);
+    .result-card__price {
+        margin: 16px 0 32px;
+        font: {
+            size: 24px;
+            family: 'proximanova-light';
+        }
+        span {
+            display: inline-block;
+            &.result-card__price-symbol {
+                margin-right: 7px;
+            }
+        }
+        @include media-xs {
+            font-size: 18px;
+            margin: 8px 0 16px;
+        }
+    }
+    .result-card__description {
+        margin: 0px;
+        line-height: 1.25;
+        line-clamp: 2;
+        -webkit-line-clamp: 2;
+        box-orient: vertical;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        font: {
+            size: 18px;
+            weight: 500;
+            family: 'proximanova-regular';
+        }
+        @include media-xs {
+            font-size: 12px;
+        }
+    }
+}
+
+//city name
+.result-card__content-location {
+    // width: 40%;
+    flex: 1;
+    padding-top: 20px;
+    .result-card__location-name {
+        text-align: center;
+        text-transform: capitalize;
+        color: var(--gray-dark-1-color);
+        font: {
+            size: 12px;
+            weight: 500;
+            family: 'proximanova-light';
+        }
+    }
+    @include media-xs {
+        display: none;
+    }
+}
