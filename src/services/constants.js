@@ -1,3 +1,3 @@
-const BASE_URL = "https://api.mercadolibre.com/"
+const BASE_URL = "http://localhost:3001/api/"
 
 export default BASE_URL;

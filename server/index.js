@@ -3,7 +3,11 @@ const customModels = require("./methods/models");
 const express = require("express");
 const axios = require('axios');
 const PORT = process.env.PORT || 3001;
+
+var cors = require('cors')
+
 const app = express();
+app.use(cors());
 
 /*
  * End Point /api/items/?q=query
