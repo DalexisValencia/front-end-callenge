@@ -29,7 +29,7 @@ app.get("/api/items/", (req, res) => {
                 }
             })
     } else {
-        res.json({ error: 'No existen parametros de busqueda' });
+        res.json({ error: 'No existen parámetros de búsqueda' });
     }
 });
 
@@ -56,7 +56,7 @@ app.get("/api/items/:id", (req, res) => {
                 }
             })
     } else {
-        res.json({ error: 'No existen parametros de busqueda' });
+        res.json({ error: 'No existen parámetros de búsqueda' });
     }
 });
 
