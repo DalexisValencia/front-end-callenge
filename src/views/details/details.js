@@ -40,6 +40,8 @@ const Details = () => {
         switch (status) {
             case "new":
                 return "Nuevo";
+                default:
+                break;
         }
     }
 
