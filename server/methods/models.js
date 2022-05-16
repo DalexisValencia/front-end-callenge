@@ -2,11 +2,12 @@
  * Create a custom model response for api calls
  */
 
-//Object Author shared between custom models
-const author = {
-    name: "Duvan Alexis",
-    lastname: "Valencia Munca"
-};
+// Object Author shared between custom models
+// This is other form to add author directly from backend. Was only a test :D
+// const author = {
+//     name: "Duvan Alexis",
+//     lastname: "Valencia Munca"
+// };
 
 /*
  * Model Custom response for /api/items/${id}
@@ -16,7 +17,7 @@ const author = {
  */
 module.exports.customItemsModel = function(res) {
     return {
-        ...author,
+        //...author,
         item: {
             id: res.item.id,
             title: res.item.title,
@@ -45,7 +46,7 @@ module.exports.customSearchModel = function(res) {
     const itemsFilter = res.results.splice(4, (res.results.length - 4));
 
     return {
-        ...author,
+        // ...author,
         categories: res.available_filters.map((item) => { return item.name }),
         items: res.results.map((item) => {
             return {

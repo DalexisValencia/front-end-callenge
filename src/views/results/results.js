@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSearchParams  } from 'react-router-dom';
 import QueriesServices from '../../services/queries.service';
+import author from '../../services/author';
 import SearchCard from '../../components/searchCard/searchCard';
 import BreadCrumb from '../../components/breadcrumb/breadcrumb';
 import Loading from "../../components/loading/loading";
@@ -18,7 +19,12 @@ const Results = () => {
         if(termSearch) {
             setIsLoad(true);
             QueriesServices.search(termSearch).then((result) => {
-                setItems(result.data.body.items);
+                //data is the model final with all requeriments
+                const data = {
+                    author,
+                    ...result.data.body,
+                }
+                setItems(data.items);
                 setIsLoad(false);
                 },
                 (error) => {

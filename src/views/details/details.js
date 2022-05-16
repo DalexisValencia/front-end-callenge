@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import QueriesServices from '../../services/queries.service';
+import author from '../../services/author';
 import BreadCrumb from '../../components/breadcrumb/breadcrumb';
 import './details.scss';
 import ErrorAlert from "../../components/error/error";
@@ -22,7 +23,12 @@ const Details = () => {
                      setError(result.data.error);
 
                 }else if(!result.data.error) {
-                    setItem(result.data.body.item);
+                    //data is the model final with all requeriments
+                    const data = {
+                        author,
+                        ...result.data.body,
+                    }
+                    setItem(data.item);
                 }
                 },
                 (error) => {
