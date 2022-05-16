@@ -3,7 +3,8 @@
  */
 
 // Object Author shared between custom models
-// This is the best form to add author object. Was only a test :D
+// This is the best form to add author object.
+// But I did this directly from front-end and api request 
 const author = {
     name: "Duvan Alexis",
     lastname: "Valencia Munca"
