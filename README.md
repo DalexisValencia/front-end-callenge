@@ -27,9 +27,9 @@ Para confirmar si los paquetes necesarios se encuentran instalados puede ejecuta
     node -v
     npm -v
 
-Cuando clone o descargue el proyecto abra una terminal e ingrese a la carpeta raiz del proyecto *front-end-callenge*.
+Cuando clone o descargue el proyecto abra una terminal e ingrese a la carpeta raiz del proyecto *front-end-challenge*.
 
-    cd  /front-end-callenge
+    cd  /front-end-challenge
 
 Corra el siguiente comando para instalar los paquetes necesarios:
 
@@ -41,7 +41,7 @@ Si ya ejecuto previamente esta instalación no es necesario volver a ejecutarla,
 
 ## Como Ejecutar
 
-Dentro de la carpeta raiz del proyecto *front-end-callenge* ejecute la siguiente tarea:  
+Dentro de la carpeta raiz del proyecto *front-end-challenge* ejecute la siguiente tarea:  
 
     npm run dev
 
