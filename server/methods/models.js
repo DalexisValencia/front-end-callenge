@@ -3,11 +3,11 @@
  */
 
 // Object Author shared between custom models
-// This is other form to add author directly from backend. Was only a test :D
-// const author = {
-//     name: "Duvan Alexis",
-//     lastname: "Valencia Munca"
-// };
+// This is the best form to add author object. Was only a test :D
+const author = {
+    name: "Duvan Alexis",
+    lastname: "Valencia Munca"
+};
 
 /*
  * Model Custom response for /api/items/${id}
