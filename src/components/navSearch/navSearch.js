@@ -15,9 +15,7 @@ const NavSearch = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.error("asjdhsajd", query);
         navigate(`/items?search=${query}`);
-        // history.push(`/items?search=${query}`);
     }
     return (
         <header className="header-search">

@@ -72,7 +72,7 @@ const Details = () => {
                         </h1>
                         <h2 className='details-item__price'>
                             <span className='details-item__price-symbol'>$</span>
-                            {item.price ? <span className='details-item__price-fraction'>{item.price.amount} <sup>00</sup> </span> : null}
+                            {item.price ? <span className='details-item__price-fraction'>{parseInt(item.price.amount).toLocaleString()} <sup>00</sup> </span> : null}
                             {item.free_shipping ? <img src={c_shipping} className='details-item__shiping-free' alt='icon-shiping-free'/> : null}
                         </h2>
                         <button className='details-item__buy'>
@@ -93,7 +93,6 @@ const Details = () => {
     }
 
     function body() {
-        console.info(item)
         if (isLoad) {
             return renderLoading();
         } else if (!isLoad && error) {

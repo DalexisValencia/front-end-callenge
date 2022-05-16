@@ -13,7 +13,11 @@ const SearchCard = (props) => {
                 <div className="result-card__content-wrapper">
                     <h2 className="result-card__price">
                         <span className="result-card__price-symbol">$</span>
-                        <span className="result-card__price-fraction">{props.item.price.amount} {props.item.price.currency}</span>
+                        <span className="result-card__price-fraction">
+                            {parseInt(props.item.price.amount).toLocaleString()}
+                            .00
+                            {/* {props.item.price.currency} */}
+                        </span>
                         {props.item.free_shipping ? <img src={c_shipping} alt="" className="result-card__shiping-free"/> : null}
                     </h2>
                     <p className="result-card__description">{props.item.title}</p>
