@@ -1,5 +1,5 @@
 <p align="center">
-  <h1 align="center"><b>::Front-end develop test - Mercado Libre::</b></h1>
+  <h1 align="center"><b>::Prueba de Desarrollo Front-end - Mercado Libre::</b></h1>
 </p>
 
 ## Tabla de contenido
@@ -8,12 +8,12 @@
 - [Requerimientos del sistema](#requerimientos-del-sistema)
 - [Configuración](#configuración)
 - [Como Ejecutar](#como-ejecutar)
-- [Imagenes](#imagenes)
 - [Colaboradores](#colaboradores)
+- [Organización](#organizacion)
 
 ## Comenzando
 
-Este manual documento le permitirá probar el entorno de desarrollo de está prueba de desarrollo.
+Este documento le permitirá ejecutar este proyecto de desarrollo.
 
 ## Requerimientos del sistema
 
@@ -22,16 +22,16 @@ Este manual documento le permitirá probar el entorno de desarrollo de está pru
 
 ## Configuración
 
-Confirmar los requerimientos del sistema.
+Para confirmar si los paquetes necesarios se encuentran instalados puede ejecutar estos comandos
 
     node -v
     npm -v
 
-Abrir una terminal e ingresar a la carpeta raiz del proyecto *front-end-callenge*.
+Cuando clone o descargue el proyecto abra una terminal e ingrese a la carpeta raiz del proyecto *front-end-callenge*.
 
     cd  /front-end-callenge
 
-Corre el siguiente comando para instalar los paquetes:
+Corra el siguiente comando para instalar los paquetes necesarios:
 
     npm install
 
@@ -41,23 +41,20 @@ Si ya ejecuto previamente esta instalación no es necesario volver a ejecutarla,
 
 ## Como Ejecutar
 
-Dentro de la carpeta raiz del proyecto *front-end-callenge*, ejecutar la siguiente tarea para ejecutar es servidor local y correr el proyecto en react. 
+Dentro de la carpeta raiz del proyecto *front-end-callenge* ejecute la siguiente tarea:  
 
     npm run dev
 
-El servidor local estará disponible en el puerto [localhost:3001](http://localhost:3001/).
+Con esta tarea el servidor se iniciará en el puerto [localhost:3001](http://localhost:3001/).
+
+Mientras que el front-end en React estará disponible en [localhost:3000](http://localhost:3000/).
 
 Para detener el anterior proceso solo se debe ejecutar **Ctrl + c**
 
-## Imagenes
-
-_En este ejemplo las imágenes fueron optimizadas para escritorio y para móvil. Con esto cumplimos con el uso adecuado de la etiqueta picture._
-
 ### Organización
 
-- **slider:** Contenedor para las imagenes del slide principal.
-- **events:** Contenedor para las imagenes de los "slides" de eventos.
-- **misc:** Contenedor para los iconos.
+- **server:** En esta carpeta encontrará todos archivos correspondientes al servidor y consumo de apis externas.
+- **src:** En esta carpeta encontrará todos archivos correspondientes al front-end de la aplicación y el consumo de apis locales.
 
 ## Colaboradores
 
