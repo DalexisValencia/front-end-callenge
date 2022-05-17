@@ -7,12 +7,15 @@ import './details.scss';
 import ErrorAlert from "../../components/error/error";
 import Loading from "../../components/loading/loading";
 import c_shipping from '../../assets/misc/ic_shipping.png';
+import { useDispatch } from 'react-redux';
+import { addSearch } from '../../redux/slices/searches';
 
 const Details = () => {
     const [error, setError] = useState('');
     const [isLoad, setIsLoad] = useState(false);
     const [item, setItem] = useState({});
     const { id } = useParams();
+    const dispatch = useDispatch();
 
     useEffect(() => {
         if(id) {
@@ -29,6 +32,8 @@ const Details = () => {
                         ...result.data.body,
                     }
                     setItem(data.item);
+                    //Save the found item in redux store.
+                    dispatch(addSearch(result.data.body));
                 }
                 },
                 (error) => {

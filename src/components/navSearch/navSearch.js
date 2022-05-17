@@ -12,7 +12,7 @@ const NavSearch = () => {
     const [inmobile, setinmobile] = useState('');
     const [autocompeteActive, setAutocompeteActive] = useState(true);
     const navigate = useNavigate();
-
+    
     //Navigate to detail item (Enter o click on icon search) 
     function handleSubmit(e) {
         e.preventDefault();
@@ -57,16 +57,16 @@ const NavSearch = () => {
         setisLeave(true);
     }
 
-
-
     return (
         <header className="header-search">
             <div className="max-width-element">
                 <Link to="/" className="header-search__logo" onClick={() => hideSuggesteds('')}>
-                    <picture>
+                    home
+                    {
+                    /* <picture>
                         <source media="(min-width:600px)" srcSet={logoDesktop} />
                         <img src={logoMobile} alt="Logo Mercado Libre" title="Logo Mercado Libre"/>
-                    </picture> 
+                    </picture>  */}
                 </Link>
                 <form className={`header-search__form-search ${inmobile}`} onSubmit={(e) => handleSubmit(e)}>
                     <input placeholder="Nunca dejes de buscar" onFocus={focus} onBlur={blur} value={query} className="header-search__input" onChange={(e) => setQuery(e.target.value)}/>
