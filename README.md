@@ -31,8 +31,9 @@ Cuando clone o descargue el proyecto abra una terminal e ingrese a la carpeta ra
 
     cd  /front-end-challenge
 
-Corra el siguiente comando para instalar los paquetes necesarios:
+Corra los siguientes comandos para instalar los paquetes necesarios:
 
+    npm install -g nodemon --save 
     npm install
 
 Si ya ejecuto previamente esta instalación no es necesario volver a ejecutarla, se puede revisar que paquetes se tienen instalados localmente.
