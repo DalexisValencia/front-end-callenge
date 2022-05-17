@@ -40,7 +40,7 @@ const Details = () => {
             setIsLoad(false);
             setError("No existen parámetros de búsqueda");
         }
-    }, []);
+    }, [id]);
 
     function TranslateItemStatus(status){
         switch (status) {
