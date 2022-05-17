@@ -6,6 +6,7 @@
 .header-search {
     padding: 8px 0;
     background-color: var(--yellow-color);
+    position: relative;
     // max container 1280px
     >.max-width-element {
         display: flex;
@@ -43,11 +44,6 @@
         border-bottom-left-radius: 2.5px;
         font-size: 18px;
         color: var(--gray-dark-2-color);
-        @include media-xs {
-            &:focus {
-                border: 1px solid red
-            }
-        }
     }
     //search lateral right button (magnifying glass icon) 
     .header-search__icon {
@@ -61,7 +57,40 @@
         border-top-right-radius: 2.5px;
         border-bottom-right-radius: 2.5px;
     }
+    &.focus-mobile {
+        position: absolute;
+        // top: 0px;
+        // left: -10px;
+        // height: 100%;
+        animation-name: mobile-focus-search;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+    }
+    animation-fill-mode: backwards;
+    transition: left 0.2s;
     @include media-xs {
         margin-left: 10px;
+    }
+}
+
+@keyframes mobile-focus-search {
+    0% {
+        top: 0;
+        left: -10px;
+        height: 80%;
+        transform: scale(0.5);
+    }
+    50% {
+        // position: absolute;
+        top: 0;
+        left: -10px;
+        height: 90%;
+        transform: scale(0.7);
+    }
+    100% {
+        top: 0;
+        left: -10px;
+        height: 100%;
+        transform: scale(1);
     }
 }

@@ -9,6 +9,7 @@ import AutoComplete from "../autocomplete/autocomplete";
 const NavSearch = () => {
     const [query, setQuery] = useState('');
     const [isLeave, setisLeave] = useState(false);
+    const [inmobile, setinmobile] = useState('');
     const [autocompeteActive, setAutocompeteActive] = useState(true);
     const navigate = useNavigate();
 
@@ -22,11 +23,12 @@ const NavSearch = () => {
      * When the user click on input search field make:
      * 1. Set the "mouseLeave" state to true
      * 2. Enable autocomplete compoment
+     * 3. Check if window.width is less than 599 and create a class for animate from
     */
     const focus = () => {
         setisLeave(false);
         setAutocompeteActive(true);
-        responseive();
+        window.innerWidth <= 599 && setinmobile('focus-mobile');
     }
 
     /*
@@ -44,7 +46,8 @@ const NavSearch = () => {
      * Hidde AutoComplete on blur event when the user is outside of the input search field
     */
     const blur = () => {
-        isLeave && hideSuggesteds(query)
+        isLeave && hideSuggesteds(query);
+        window.innerWidth <= 599 && setinmobile('');
     }
 
     /*
@@ -54,10 +57,6 @@ const NavSearch = () => {
         setisLeave(true);
     }
 
-    const responseive = () => {
-        const { innerWidth: width, innerHeight: height } = window;
-        console.info(window.innerWidth)
-    }
 
 
     return (
@@ -69,10 +68,10 @@ const NavSearch = () => {
                         <img src={logoMobile} alt="Logo Mercado Libre" title="Logo Mercado Libre"/>
                     </picture> 
                 </Link>
-                <form className="header-search__form-search" onSubmit={(e) => handleSubmit(e)} onMouseLeave={onmouseleave}>
+                <form className={`header-search__form-search ${inmobile}`} onSubmit={(e) => handleSubmit(e)}>
                     <input placeholder="Nunca dejes de buscar" onFocus={focus} onBlur={blur} value={query} className="header-search__input" onChange={(e) => setQuery(e.target.value)}/>
                     <button className="header-search__icon" type="submit"></button>
-                    {query !== '' && autocompeteActive ? <AutoComplete term={query} clickResult={(item) => hideSuggesteds(item)}/> : null}
+                    {query !== '' && autocompeteActive ? <AutoComplete term={query} clickResult={(item) => hideSuggesteds(item)} onMouseLeave={onmouseleave}/> : null}
                 </form>
             </div>
         </header>
