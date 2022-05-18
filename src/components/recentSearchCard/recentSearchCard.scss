@@ -1,12 +1,13 @@
 .recent-search__card{
     display: inline-block;
     text-decoration: none;
-    max-width: 250px;
+    max-width: 215px;
     width: 100%;
     border-radius: 2.5px;
     background-color: var(--white-color);
     border: 1px solid var(--gray-light-color);
     padding-top: 8px;
+    margin: 0px 16px 16px;
     .recent-search__image{
         margin: 0px;
         width: 100%;

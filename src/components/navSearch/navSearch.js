@@ -60,12 +60,12 @@ const NavSearch = () => {
     return (
         <header className="header-search">
             <div className="max-width-element">
-                <Link to="/" className="header-search__logo" onClick={() => hideSuggesteds('')}>
+                {/* <Link to="/" className="header-search__logo" onClick={() => hideSuggesteds('')}>
                     <picture>
                         <source media="(min-width:600px)" srcSet={logoDesktop} />
                         <img src={logoMobile} alt="Logo Mercado Libre" title="Logo Mercado Libre"/>
                     </picture>
-                </Link>
+                </Link> */}
                 <form className={`header-search__form-search ${inmobile}`} onSubmit={(e) => handleSubmit(e)}>
                     <input placeholder="Nunca dejes de buscar" onFocus={focus} onBlur={blur} value={query} className="header-search__input" onChange={(e) => setQuery(e.target.value)}/>
                     <button className="header-search__icon" type="submit"></button>

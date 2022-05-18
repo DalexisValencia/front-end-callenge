@@ -5,6 +5,10 @@ export const searchesSlice = createSlice({
     initialState: [],
     reducers: {
         addSearch: (state, action) => {
+            // state.find(stateItem => {
+            //     console.info(stateItem.id);
+            //     console.info(action.payload.id);
+            // })
             state.push(action.payload);
         }
     }

@@ -20,7 +20,7 @@ const Search = () => {
                     Busquedas Recientes
                 </h2>
                 <div className='recents__searches'>
-                    <RecentSearchCard />
+                    {searches.map((search) => <RecentSearchCard item={search.item} key={search.item.id}/>)}
                 </div>
             </div>
         );
@@ -33,10 +33,6 @@ const Search = () => {
     return (
         <section className="search-section__wrapper max-width-element">
             {body()}
-            {searches.map((search) => (
-                "busqueda"
-				// <TodoItem id={todo.id} title={todo.title} completed={todo.completed} />
-			))}
         </section>
     )
 }

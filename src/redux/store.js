@@ -6,7 +6,7 @@ import { persistReducer } from 'redux-persist';
 const reducers = combineReducers({ searches: searchesReducer });
 
 const persistConfig = {
-    key: 'counter',
+    key: 'searches',
     storage,
 };
 
