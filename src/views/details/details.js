@@ -7,7 +7,7 @@ import './details.scss';
 import ErrorAlert from "../../components/error/error";
 import Loading from "../../components/loading/loading";
 import c_shipping from '../../assets/misc/ic_shipping.png';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addSearch } from '../../redux/slices/searches';
 
 const Details = () => {
@@ -16,6 +16,7 @@ const Details = () => {
     const [item, setItem] = useState({});
     const { id } = useParams();
     const dispatch = useDispatch();
+    const searches = useSelector((state) => state.searches);
 
     useEffect(() => {
         if(id) {
@@ -32,8 +33,13 @@ const Details = () => {
                         ...result.data.body,
                     }
                     setItem(data.item);
-                    //Save the found item in redux store.
-                    dispatch(addSearch(result.data.body));
+                    //if state data has content
+                    if(searches.length) {
+                        //Find coinciden inside state 'searches'
+                       const found = searches.find(item => item.item.id === result.data.body.item.id);
+                       //if don't exist coincidences call dispatch
+                       found === undefined && dispatch(addSearch(result.data.body));
+                    }
                 }
                 },
                 (error) => {
@@ -45,7 +51,7 @@ const Details = () => {
             setIsLoad(false);
             setError("No existen parámetros de búsqueda");
         }
-    }, [id]);
+    }, [id, searches]);
 
     function TranslateItemStatus(status){
         switch (status) {
