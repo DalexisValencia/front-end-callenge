@@ -17,6 +17,7 @@ const NavSearch = () => {
     function handleSubmit(e) {
         e.preventDefault();
         navigate(`/items?search=${query}`);
+        hideSuggesteds('');
     }
 
     /*
@@ -32,10 +33,11 @@ const NavSearch = () => {
     }
 
     /*
-     * Hide the autocomplete compoment in three cases:
+     * Hide the autocomplete compoment in four cases:
      * 1. The user clicks on a item suggested
      * 2. The user clicks outside input search field and outside autocomplete component
      * 3. The user clicks in logo
+     * 4. The user submits the form
     */
     const hideSuggesteds = (item) => {
         setQuery(item);
