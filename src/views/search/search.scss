@@ -1,22 +1,42 @@
+@import '../../styles/queries.scss';
 .search-section__wrapper {
-    background-color: var(--white-color);
-    border-radius: 4px;
-    margin-top: 36px;
-    padding: 16px;
-    height: 300px;
-    min-height: 40vh;
+    margin: 36px 0;
     display: flex;
     align-items: center;
 }
 
 .search-section__welcome {
+    padding: 16px;
+    height: 300px;
+    min-height: 40vh;
+    background-color: var(--white-color);
+    border-radius: 4px;
     width: 100%;
     text-align: center;
-    padding: 10px 20px;
+    padding: 16px;
     color: var(--gray-dark-1-color);
     font: {
         size: 25px;
         family: 'proximanova-regular';
         weight: 500;
+    }
+    @include media-xs {
+        font-size: 19px;
+    }
+}
+//Recents searches Container
+.search-section__recents {
+    width: 100%;
+    padding: 16px;
+    .recents__title{
+        margin: 0 0 16px;
+        font: {
+            size: 26;
+            family: 'proximanova-regular';
+            weight: 300;
+        }
+        @include media-xs {
+            font-size: 20px;
+        }
     }
 }
