@@ -27,7 +27,7 @@ const Search = () => {
     }
 
     const body = () => {
-        return recentSearches();
+        return searches.length ? recentSearches() : emptySearches();
     }
 
     return (
