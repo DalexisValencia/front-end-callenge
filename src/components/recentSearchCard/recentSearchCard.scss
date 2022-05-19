@@ -1,24 +1,25 @@
-.recent-search__card{
+@import '../../styles/queries.scss';
+.recent-search__card {
     display: inline-block;
     text-decoration: none;
     max-width: 215px;
     width: 100%;
-    border-radius: 2.5px;
+    border-radius: 4px;
     background-color: var(--white-color);
     border: 1px solid var(--gray-light-color);
     padding-top: 8px;
     margin: 0px 16px 16px;
-    .recent-search__image{
+    .recent-search__image {
         margin: 0px;
         width: 100%;
         border-bottom: 1px solid var(--gray-light-color);
-        img{
+        img {
             width: 100%;
         }
     }
-    .recent-search__content{
+    .recent-search__content {
         padding: 16px;
-        .recent-search__price{
+        .recent-search__price {
             color: var(--gray-dark-2-color);
             margin: 12px 0 12px;
             font: {
@@ -29,11 +30,11 @@
             .recent-search__price-symbol {
                 margin-right: 5px;
             }
-            .recent-search__shiping-free{
+            .recent-search__shiping-free {
                 margin-left: 5px;
             }
         }
-        .recent-search__title{
+        .recent-search__title {
             color: var(--gray-color);
             margin: 0px;
             line-height: 1.25;
@@ -51,5 +52,8 @@
                 weight: 300;
             }
         }
+    }
+    @include media-xs {
+        max-width: 100%;
     }
 }

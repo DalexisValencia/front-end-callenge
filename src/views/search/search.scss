@@ -26,11 +26,11 @@
         font-size: 19px;
     }
 }
+
 //Recents searches Container
 .search-section__recents {
     width: 100%;
-    padding: 16px;
-    .recents__title{
+    .recents__title {
         margin: 0 0 16px;
         font: {
             size: 26;
@@ -41,11 +41,12 @@
             font-size: 20px;
         }
     }
-    .recents__searches{
+    .recents__searches {
         display: flex;
         align-items: center;
-        border: 1px solid magenta;
         flex-wrap: wrap;
-        justify-content: space-between;
+        @include media-xs {
+            max-width: 600px;
+        }
     }
 }

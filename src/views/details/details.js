@@ -34,12 +34,14 @@ const Details = () => {
                     }
                     setItem(data.item);
                     //if state data has content
-                    if(searches.length) {
+                    console.warn(searches.length)
+                    //if(searches.length) {
                         //Find coinciden inside state 'searches'
                        const found = searches.find(item => item.item.id === result.data.body.item.id);
+                       console.warn("sjjsjs", found)
                        //if don't exist coincidences call dispatch
                        found === undefined && dispatch(addSearch(result.data.body));
-                    }
+                    //}
                 }
                 },
                 (error) => {

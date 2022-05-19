@@ -3,9 +3,8 @@ import c_shipping from '../../assets/misc/ic_shipping.png';
 import './recentSearchCard.scss';
 
 const RecentSearchCard = (props) => {
-    console.info(props.item)
     return (
-        <Link className='recent-search__card' to="/items/MLA835201957">
+        <Link className='recent-search__card' to={`items/${props.item.id}`}>
             <figure className='recent-search__image'>
                 <img src={props.item.picture} alt={props.item.title} title={props.item.title}/>
             </figure>
