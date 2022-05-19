@@ -47,6 +47,7 @@
         flex-wrap: wrap;
         @include media-xs {
             max-width: 600px;
+            justify-content: center;
         }
     }
 }

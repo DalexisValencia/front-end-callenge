@@ -54,6 +54,9 @@
         }
     }
     @include media-xs {
+        max-width: 40%;
+    }
+    @include media-xs-small {
         max-width: 100%;
     }
 }
